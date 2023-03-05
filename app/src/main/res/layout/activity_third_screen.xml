@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_bg_waves"
+    tools:context=".activity.ThirdScreenActivity">
+
+    <eightbitlab.com.blurview.BlurView
+        android:id="@+id/blurView_toolbar1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#739FD5EE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <TextView
+                android:id="@+id/textView"
+                style="@style/tooBar_header_text"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="130dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="80dp"
+                android:layout_marginBottom="40dp"
+                android:text="Third Step - Data Form"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/textView2"
+                style="@style/input_label_Text"
+                android:text="Input Data 03"
+                app:layout_constraintStart_toStartOf="@+id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+            <TextView
+                style="@style/input_label_Text"
+                android:text="Live in Rajagiriya"
+                app:layout_constraintEnd_toEndOf="@+id/textView"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/textView2"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/ic_logout"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.507" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </eightbitlab.com.blurview.BlurView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/blurView_toolbar1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_back_arrow"
+                    android:padding="5dp"/>
+                <TextView
+                    style="@style/form_header"
+                    android:text="Second Data Form"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:orientation="vertical">
+                <TextView
+                    style="@style/input_label_Text"
+                    android:text="Full Name"
+                    android:layout_marginStart="30dp"/>
+                <eightbitlab.com.blurview.BlurView
+                    android:id="@+id/ed_bl_nameof_member"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginVertical="5dp"
+                    android:background="@drawable/btn_gradiant_edit_round">
+                    <EditText
+                        style="@style/edit_text_blur"
+                        android:text=""
+                        android:background="@drawable/gradiant_edit_round"/>
+                </eightbitlab.com.blurview.BlurView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:orientation="vertical">
+                <TextView
+                    style="@style/input_label_Text"
+                    android:text="Name with Initials"
+                    android:layout_marginStart="30dp"/>
+                <eightbitlab.com.blurview.BlurView
+                    android:id="@+id/ed_bl_namewith_initials"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginVertical="5dp"
+                    android:background="@drawable/btn_gradiant_edit_round">
+                    <EditText
+                        style="@style/edit_text_blur"
+                        android:text=""
+                        android:background="@drawable/gradiant_edit_round"/>
+                </eightbitlab.com.blurview.BlurView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:orientation="vertical">
+                <TextView
+                    style="@style/input_label_Text"
+                    android:text="Address"
+                    android:layout_marginStart="30dp"/>
+                <eightbitlab.com.blurview.BlurView
+                    android:id="@+id/ed_bl_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginVertical="5dp"
+                    android:background="@drawable/gradiant_edit_round">
+                    <EditText
+                        style="@style/edit_text_blur"
+                        android:text=""
+                        android:background="@drawable/gradiant_edit_round"/>
+                </eightbitlab.com.blurview.BlurView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:orientation="vertical">
+                <TextView
+                    style="@style/input_label_Text"
+                    android:text="Reversed Address"
+                    android:layout_marginStart="30dp"/>
+                <eightbitlab.com.blurview.BlurView
+                    android:id="@+id/ed_bl_reverse_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginVertical="5dp"
+                    android:background="@drawable/gradiant_edit_round">
+                    <EditText
+                        style="@style/edit_text_blur"
+                        android:text=""
+                        android:background="@drawable/gradiant_edit_round"/>
+                </eightbitlab.com.blurview.BlurView>
+
+            </LinearLayout>
+
+            <LinearLayout android:orientation="horizontal"
+                android:layout_height="fill_parent"
+                android:layout_width="fill_parent">
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_height="fill_parent"
+                    android:layout_width="0dp"
+                    android:layout_marginStart="5dp"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        style="@style/input_label_Text"
+                        android:text="Mobile (Local)"
+                        android:layout_marginStart="30dp"/>
+                    <eightbitlab.com.blurview.BlurView
+                        android:id="@+id/ed_bl_mobile_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginVertical="5dp"
+                        android:background="@drawable/gradiant_edit_round">
+                        <EditText
+                            style="@style/edit_text_blur"
+                            android:background="@drawable/gradiant_edit_round"/>
+                    </eightbitlab.com.blurview.BlurView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/input_label_Text"
+                        android:layout_marginStart="30dp"
+                        android:text="Landline (Local)" />
+
+                    <eightbitlab.com.blurview.BlurView
+                        android:id="@+id/ed_bl_landline"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="5dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@drawable/gradiant_edit_round">
+
+                        <EditText
+                            style="@style/edit_text_blur"
+                            android:background="@drawable/gradiant_edit_round" />
+                    </eightbitlab.com.blurview.BlurView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout android:orientation="horizontal"
+                android:layout_height="fill_parent"
+                android:layout_width="fill_parent">
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_height="fill_parent"
+                    android:layout_width="0dp"
+                    android:layout_marginStart="5dp"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        style="@style/input_label_Text"
+                        android:text="Mobile (International)"
+                        android:layout_marginStart="30dp"/>
+                    <eightbitlab.com.blurview.BlurView
+                        android:id="@+id/ed_bl_global_mobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginVertical="5dp"
+                        android:background="@drawable/gradiant_edit_round">
+                        <EditText
+                            android:id="@+id/MobileET"
+                            style="@style/edit_text_blur"
+                            android:background="@drawable/gradiant_edit_round"/>
+                    </eightbitlab.com.blurview.BlurView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/input_label_Text"
+                        android:layout_marginStart="30dp"
+                        android:text="Landline (International)" />
+
+                    <eightbitlab.com.blurview.BlurView
+                        android:id="@+id/ed_bl_global_landline"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="5dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@drawable/gradiant_edit_round">
+
+                        <EditText
+                            style="@style/edit_text_blur"
+                            android:background="@drawable/gradiant_edit_round" />
+                    </eightbitlab.com.blurview.BlurView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:orientation="vertical">
+                <TextView
+                    style="@style/input_label_Text"
+                    android:text="Gender"
+                    android:layout_marginStart="30dp"/>
+                <eightbitlab.com.blurview.BlurView
+                    android:id="@+id/ed_bl_condition"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginVertical="5dp"
+                    android:background="@drawable/gradiant_edit_round">
+                    <EditText
+                        style="@style/edit_text_blur"
+                        android:background="@drawable/gradiant_edit_round"/>
+                </eightbitlab.com.blurview.BlurView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:orientation="vertical">
+                <TextView
+                    style="@style/input_label_Text"
+                    android:text="Birthday"
+                    android:layout_marginStart="30dp"/>
+
+                <eightbitlab.com.blurview.BlurView
+                    android:id="@+id/ed_bl_birthday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginVertical="5dp"
+                    android:background="@drawable/gradiant_edit_round">
+
+                    <EditText
+                        style="@style/edit_text_blur"
+                        android:background="@drawable/gradiant_edit_round"/>
+                </eightbitlab.com.blurview.BlurView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:orientation="vertical">
+                <TextView
+                    style="@style/input_label_Text"
+                    android:text="Membership Type"
+                    android:layout_marginStart="30dp"/>
+
+                <eightbitlab.com.blurview.BlurView
+                    android:id="@+id/ed_bl_notes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginVertical="5dp"
+                    android:background="@drawable/gradiant_edit_round">
+
+                    <EditText
+                        style="@style/edit_text_blur"
+                        android:background="@drawable/gradiant_edit_round"/>
+                </eightbitlab.com.blurview.BlurView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:orientation="vertical">
+                <TextView
+                    style="@style/input_label_Text"
+                    android:text="Membership Value (Before Tax)"
+                    android:layout_marginStart="30dp"/>
+
+                <eightbitlab.com.blurview.BlurView
+                    android:id="@+id/ed_bl_value_before_tax"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginVertical="5dp"
+                    android:background="@drawable/gradiant_edit_round">
+
+                    <EditText
+                        style="@style/edit_text_blur"
+                        android:background="@drawable/gradiant_edit_round"/>
+                </eightbitlab.com.blurview.BlurView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:orientation="vertical">
+                <TextView
+                    style="@style/input_label_Text"
+                    android:text="Final Amount (after Cal Tax)"
+                    android:layout_marginStart="30dp"/>
+
+                <eightbitlab.com.blurview.BlurView
+                    android:id="@+id/ed_bl_value_final_cal_tax"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginVertical="5dp"
+                    android:background="@drawable/gradiant_edit_round">
+
+                    <EditText
+                        style="@style/edit_text_blur"
+                        android:background="@drawable/gradiant_edit_round"/>
+                </eightbitlab.com.blurview.BlurView>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="10dp"
+                android:padding="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="130dp"
+                    android:layout_height="49dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@drawable/save_oneside_round">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_save"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="130dp"
+                    android:layout_height="49dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@drawable/print_oneside_round">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_print"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/progress_with_tick"
+                android:layout_gravity="center"
+                android:layout_marginBottom="30dp"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
